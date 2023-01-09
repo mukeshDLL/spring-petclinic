@@ -18,7 +18,7 @@ pipeline {
 
     stage('Unit Test') {
       steps {
-        sh './mvnw "-Dtest=**/petclinic/*/*.java" msbcmutest'
+        sh './mvnw "-Dtest=**/petclinic/*/*.java" test'
       }
     }
 
