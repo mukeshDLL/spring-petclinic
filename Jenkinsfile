@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'msbcmutest'
+    }
+
+  }
   stages {
     stage('compile') {
       steps {
