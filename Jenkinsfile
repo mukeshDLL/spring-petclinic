@@ -50,7 +50,7 @@ pipeline {
 
         stage('Archive JUnit formatted test results') {
           steps {
-            junit '**/target/surefire-reports/*'
+            junit '**/target/surefire-reports/'
           }
         }
 
