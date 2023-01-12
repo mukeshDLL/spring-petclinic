@@ -42,6 +42,12 @@ pipeline {
         }
 
         stage('Integration and Performance') {
+          agent {
+            node {
+              label 'msbcmutest'
+            }
+
+          }
           steps {
             sh './mvnw verify'
             junit '**/target/surefire-reports/org.springframework.samples.petclinic.PetClinicIntegrationTests.txt'
