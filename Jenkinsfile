@@ -44,7 +44,7 @@ pipeline {
         stage('Integration and Performance') {
           agent {
             node {
-              label 'msbtest'
+              label 'msbcmutest'
             }
 
           }
