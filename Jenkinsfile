@@ -50,7 +50,7 @@ pipeline {
           }
           steps {
             sh './mvnw verify'
-            junit '**/target/surefire-reports/org.springframework.samples.petclinic.PetClinicIntegrationTests.txt'
+            junit '**/target/surefire-reports/'
           }
         }
 
