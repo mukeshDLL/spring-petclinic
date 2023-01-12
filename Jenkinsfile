@@ -42,6 +42,12 @@ pipeline {
         }
 
         stage('Integration and Performance') {
+          agent {
+            node {
+              label 'msbtest'
+            }
+
+          }
           steps {
             sh './mvnw verify'
             junit '**/target/surefire-reports/org.springframework*.txt'
