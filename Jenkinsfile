@@ -44,7 +44,7 @@ pipeline {
         stage('Integration and Performance') {
           steps {
             sh './mvnw verify'
-            junit '**/target/surefire-reports/'
+            junit '**/target/surefire-reports/*.xml'
           }
         }
 
